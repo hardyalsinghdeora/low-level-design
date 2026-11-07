@@ -33,7 +33,7 @@ Requires Node.js 20 or newer.
 ## Problems
 
 <!-- BEGIN:problems -->
-36 problems, each with a write-up and a tested TypeScript solution.
+37 problems, each with a write-up and a tested TypeScript solution.
 
 ### Easy
 
@@ -85,6 +85,7 @@ Requires Node.js 20 or newer.
 | [Restaurant Management System](problems/restaurant-management-system.md) | Strategy, Observer, State (transition table), Aggregate root | [`src/restaurant-management-system`](src/restaurant-management-system/) |
 | [Ride-Sharing Service](problems/ride-sharing.md) | Strategy (matching, fare, surge, cancellation), Observer, State (validated transitions), compare-and-set | [`src/ride-sharing`](src/ride-sharing/) |
 | [Stock Brokerage (Order Matching)](problems/stock-brokerage.md) | Strategy (fees), Observer (executions), State (order lifecycle), Aggregate root | [`src/stock-brokerage`](src/stock-brokerage/) |
+| [Subscription Billing System](problems/subscription-billing.md) | Strategy (proration, retry schedule), State (subscription and invoice lifecycles), Adapter (payment gateway), Idempotency key | [`src/subscription-billing`](src/subscription-billing/) |
 <!-- END:problems -->
 
 ## What every solution contains
