@@ -33,7 +33,7 @@ Requires Node.js 20 or newer.
 ## Problems
 
 <!-- BEGIN:problems -->
-8 problems, each with a write-up and a tested TypeScript solution.
+30 problems, each with a write-up and a tested TypeScript solution.
 
 ### Easy
 
@@ -48,10 +48,37 @@ Requires Node.js 20 or newer.
 | Problem | Patterns and concepts | Code |
 |---|---|---|
 | [Car Rental System](problems/car-rental-system.md) | Specification, Strategy, Decorator, State (transition table) | [`src/car-rental-system`](src/car-rental-system/) |
+| [Coffee Vending Machine](problems/coffee-vending-machine.md) | Decorator, Observer, Strategy | [`src/coffee-vending-machine`](src/coffee-vending-machine/) |
+| [Concert Ticket Booking System](problems/concert-ticket-booking.md) | Strategy (refund), Observer (waitlist offers), State machine, Compensation for atomic orders | [`src/concert-ticket-booking`](src/concert-ticket-booking/) |
+| [Course Registration System](problems/course-registration-system.md) | Strategy (rule chain), Observer, State (transition table), Aggregate root | [`src/course-registration-system`](src/course-registration-system/) |
 | [Digital Wallet](problems/digital-wallet.md) | Double-entry ledger, Strategy, State (transition table), Idempotent Receiver, Compensating Transaction | [`src/digital-wallet`](src/digital-wallet/) |
+| [Hotel Management System](problems/hotel-management-system.md) | Strategy (pricing, cancellation), State machine, Aggregate root, Value object | [`src/hotel-management-system`](src/hotel-management-system/) |
+| [In-Memory File System](problems/in-memory-file-system.md) | Composite, Specification, Facade (aggregate root) | [`src/in-memory-file-system`](src/in-memory-file-system/) |
+| [Library Management System](problems/library-management-system.md) | Strategy, Observer, Specification, State (transition table) | [`src/library-management-system`](src/library-management-system/) |
+| [Logging Framework](problems/logging-framework.md) | Strategy (formatters), Chain of Responsibility (logger hierarchy), Decorator (async appender), registry instead of Singleton | [`src/logging-framework`](src/logging-framework/) |
+| [LRU Cache (and LFU)](problems/lru-cache.md) | Strategy (eviction policy behind a `Cache` interface), Observer (`onEvict`), composition of data structures | [`src/lru-cache`](src/lru-cache/) |
+| [Movie Ticket Booking System](problems/movie-ticket-booking.md) | Strategy (payment, refund), Observer, State machine, TTL lock (lease) | [`src/movie-ticket-booking`](src/movie-ticket-booking/) |
+| [Music Streaming Service (Spotify)](problems/music-streaming.md) | State, Strategy (repeat mode, tier, recommendation), Template Method, Facade | [`src/music-streaming`](src/music-streaming/) |
+| [Online Auction System](problems/online-auction-system.md) | Strategy, Observer, State (validated transitions), Application Service | [`src/online-auction-system`](src/online-auction-system/) |
+| [Online Shopping System](problems/online-shopping.md) | Specification, Strategy (payment, coupons), Observer, State (validated transitions), Idempotency key | [`src/online-shopping`](src/online-shopping/) |
 | [Social Network (Facebook-lite)](problems/social-network.md) | Strategy (feed fan-out), Observer (notifications), State (friend requests), Policy object (visibility), keyset pagination | [`src/social-network`](src/social-network/) |
+| [Splitwise (Expense Sharing)](problems/splitwise.md) | Strategy (splits, debt simplification), Observer, Aggregate root, derived read model | [`src/splitwise`](src/splitwise/) |
 | [Stack Overflow](problems/stack-overflow.md) | Observer (event bus), Strategy + Composite (search), State (post lifecycle), Interface segregation | [`src/stack-overflow`](src/stack-overflow/) |
 | [Task Management System (Jira-lite)](problems/task-management-system.md) | State machine (table-driven State), Composite, Observer, Specification, Strategy | [`src/task-management-system`](src/task-management-system/) |
+| [Text Editor with Undo and Redo](problems/text-editor.md) | Command, Composite (macros), Memento (save points), Template Method | [`src/text-editor`](src/text-editor/) |
+| [Traffic Signal Control System](problems/traffic-signal-control.md) | State, Strategy, Observer | [`src/traffic-signal-control`](src/traffic-signal-control/) |
+| [Vending Machine](problems/vending-machine.md) | State, Strategy | [`src/vending-machine`](src/vending-machine/) |
+
+### Hard
+
+| Problem | Patterns and concepts | Code |
+|---|---|---|
+| [Chess Game](problems/chess-game.md) | Template Method (piece hierarchy), Command (moves with undo), Factory, State (game status) | [`src/chess-game`](src/chess-game/) |
+| [Food Delivery System](problems/food-delivery.md) | Strategy (dispatch, pricing, cancellation), Decorator (surge), Observer, State machine with actor permissions | [`src/food-delivery`](src/food-delivery/) |
+| [LinkedIn (professional network)](problems/linkedin.md) | State (invitation, application), Specification, Repository-style aggregate service, bounded BFS | [`src/linkedin`](src/linkedin/) |
+| [Pub-Sub System (Message Broker)](problems/pub-sub-system.md) | Observer vs broker (Publish-Subscribe), State (delivery lifecycle), Strategy (retry policy) | [`src/pub-sub-system`](src/pub-sub-system/) |
+| [Restaurant Management System](problems/restaurant-management-system.md) | Strategy, Observer, State (transition table), Aggregate root | [`src/restaurant-management-system`](src/restaurant-management-system/) |
+| [Stock Brokerage (Order Matching)](problems/stock-brokerage.md) | Strategy (fees), Observer (executions), State (order lifecycle), Aggregate root | [`src/stock-brokerage`](src/stock-brokerage/) |
 <!-- END:problems -->
 
 ## What every solution contains
@@ -76,10 +103,10 @@ The patterns used here are explained in depth, with their own examples and tests
 <!-- BEGIN:patterns -->
 | Category | Patterns |
 |---|---|
-| Creational | [Singleton](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/creational/singleton) |
-| Structural |  |
-| Behavioral | [Chain of Responsibility](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/chain-of-responsibility), [Strategy](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/strategy) |
-| Modern backend |  |
+| Creational | [Singleton](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/creational/singleton), [Factory Method](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/creational/factory-method), [Abstract Factory](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/creational/abstract-factory), [Builder](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/creational/builder), [Prototype](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/creational/prototype) |
+| Structural | [Adapter](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/structural/adapter), [Bridge](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/structural/bridge), [Composite](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/structural/composite), [Decorator](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/structural/decorator), [Facade](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/structural/facade), [Flyweight](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/structural/flyweight), [Proxy](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/structural/proxy) |
+| Behavioral | [Chain of Responsibility](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/chain-of-responsibility), [Command](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/command), [Iterator](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/iterator), [Mediator](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/mediator), [Memento](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/memento), [Observer](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/observer), [State](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/state), [Strategy](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/strategy), [Template Method](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/template-method), [Visitor](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/visitor), [Interpreter](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/behavioral/interpreter) |
+| Modern backend | [Repository](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/modern/repository), [Specification](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/modern/specification), [Null Object](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/modern/null-object), [Dependency Injection](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/modern/dependency-injection), [Circuit Breaker](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/modern/circuit-breaker), [Saga](https://github.com/hardyalsinghdeora/design-patterns/tree/main/src/modern/saga) |
 <!-- END:patterns -->
 
 ## Repository layout
